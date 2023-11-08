@@ -43,7 +43,7 @@ export default defineComponent({
         { "x": 2, "y": 7, "w": 1, "h": 5, "i": "C" },
       ],
       activeCards: [UsersList],
-      components: ['UserList', 'Social Media', 'Invoices']
+      components: [],
       eventLog: []
 
     }
