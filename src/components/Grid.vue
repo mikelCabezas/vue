@@ -26,14 +26,14 @@ export default defineComponent({
             const msg = "RESIZED i=" + i + ", X=" + newX + ", Y=" + newY + ", H(px)=" + newHPx + ", W(px)=" + newWPx;
             this.eventLog.push(msg);
             console.log(msg);
-},
+      },
   },
-    watch: {
-        eventLog: function() {
-            const eventsDiv = this.$refs.eventsDiv;
-            eventsDiv.scrollTop = eventsDiv.scrollHeight;
-        }
-    },
+  watch: {
+    eventLog: function() {
+      const eventsDiv = this.$refs.eventsDiv;
+      eventsDiv.scrollTop = eventsDiv.scrollHeight;
+    }
+  },
   data() {
     return {
       layout: [
@@ -43,6 +43,7 @@ export default defineComponent({
         { "x": 2, "y": 7, "w": 1, "h": 5, "i": "C" },
       ],
       activeCards: [UsersList],
+      components: ['UserList', 'Social Media', 'Invoices']
       eventLog: []
 
     }

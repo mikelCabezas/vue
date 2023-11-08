@@ -38,7 +38,7 @@ export default defineComponent({
   async created() {
   const response = await fetch("https://fakerapi.it/api/v1/users?_quantity=10");
   const data = await response.json();
-  this.users = data.data;
+  this.users = datdataa.;
   console.log(data.data)
 },
 data() {
