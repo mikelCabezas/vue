@@ -1,0 +1,22 @@
+{
+  "name": "vuevite",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --force",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "vite": "^4.3.2",
+    "vite-plugin-vue2": "^2.0.2",
+    "vue-grid-layout": "^2.4.0",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "dependencies": {
+    "vue": "^2.7.10"
+  }
+}
