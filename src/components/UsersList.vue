@@ -1,8 +1,7 @@
 
 <template>
 <div>
-    <h1>COMPONENT 1</h1>
-    <table class="table tablesorter text-left border border-zinc-500 bg-zinc-700">
+    <table class="table tablesorter text-left border border-zinc-500 bg-zinc-700 w-full">
         <thead>
         <tr class="bg-zinc-700">
         <slot name="columns">
@@ -11,13 +10,15 @@
         </tr>
         </thead>
         <tbody>
-            <tr v-for="(user, index) in users" :key="index" class="odd:bg-zinc-800">
+            <tr v-for="(user, index) of users" :key="index" class="odd:bg-zinc-800">
             <slot :row="user">
                 <td v-for="(column, index) in columns" class="px-2.5 py-1">
-                    <div v-if="column === 'user'">{{user.firstname}} {{user.lastname}}</div>
+                    <div class="flex flex-row items-center" v-if="column === 'user'"><img class="w-10 rounded-full mr-3" :src="user.image"/> {{user.firstname}} {{user.lastname}}</div>
                     <div v-if="column === 'email'">{{user.email}}</div>
                     <div v-if="column === 'username'">{{user.username}}</div>
-                    <div v-if="column === 'website'">{{user.website}}</div>
+                    <div v-if="column === 'created at'">{{new Date(user.date).toLocaleDateString('es')}}</div>
+                    <div v-if="column === 'status'">{{user.status ? 'Active' : 'Inactive'}}</div>
+                    <!-- <div v-if="column === 'website'">{{user.website}}</div> -->
                 </td>
             </slot>
         </tr>
@@ -36,15 +37,15 @@ export default defineComponent({
     },
   },
   async created() {
-  const response = await fetch("https://fakerapi.it/api/v1/users?_quantity=10");
+  const response = await fetch("https://run.mocky.io/v3/37b71c8a-54ca-4050-8e82-11f9078b7786");
   const data = await response.json();
+  console.log(data)
   this.users = data.data;
-  console.log(data.data)
 },
 data() {
     return {
         users: {},
-        columns: ['user', 'username', 'email', 'website']
+        columns: ['user', 'username', 'email', 'created at', 'status']
     }
 }
 })

@@ -46,7 +46,10 @@ El principal desafío de la prueba es la capacidad de editar la vista utilizando
 
 **Tiempo Estimado:** 1 semana
 
-**Recursos:** Se proporcionará un archivo JSON con la información necesaria para el desarrollo de la prueba.
+**Recursos mockeados:** 
+1. **Users**: https://run.mocky.io/v3/37b71c8a-54ca-4050-8e82-11f9078b7786
+2. **Posts**: https://run.mocky.io/v3/479cd572-ff0d-4bfe-82a8-f93a1ee016bb
+3. **Credits**: https://run.mocky.io/v3/8fc01164-7c8e-47fc-a6f0-3d913f7c79ab
 
 ---
 
