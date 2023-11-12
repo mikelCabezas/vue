@@ -30,7 +30,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div @mouseover="hoverHeader" @mouseleave="unHoverHeader" class="header bg-indigo-800 h-screen w-14 hover:w-64 absolute left-0 top-0 overflow-hidden flex flex-col   ease-linear duration-200">
+  <div @mouseover="hoverHeader" @mouseleave="unHoverHeader" class="header bg-indigo-800 h-screen w-14 hover:w-64 absolute left-0 top-0 overflow-hidden flex flex-col ease-linear duration-200">
     <div class="menu flex flex-col justify-center mt-2">
       <div class="menu mb-10">
         <span class="material-symbols-rounded cursor-pointer text-4xl w-14 flex justify-center"> menu </span>
