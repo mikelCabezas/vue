@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-@apply dark:bg-zinc-800 dark:text-zinc-100 pl-14;
+@apply dark:bg-zinc-800 dark:text-zinc-100;
 }
 #app {
   @apply flex flex-col max-w-7xl my-0 mx-auto p-8 w-full;

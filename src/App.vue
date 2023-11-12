@@ -11,36 +11,29 @@ export default defineComponent({
   },
   data() {
     return {
-      component: null
+      component: null,
+      headerMainSpacing: 'padding-left: 5rem;'
     }
   },
   methods: {
-     handleAddToGrid:  function(event) {
-      console.log(event.target.value)
-      this.component = event.target.value
-    }
+    handleAddToGrid: function (value) {
+      this.component = value
+    },
+    handleHoverHeader: function (value) {
+      this.headerMainSpacing = 'padding-left: 18rem;'
+    },
+    unHandleHoverHeader: function (value) {
+      this.headerMainSpacing = 'padding-left: 5rem;'
+    },
   },
-  
+
 })
 </script>
 
 <template>
-  <div id="app">
-    <Header />
-    <button v-on:click="handleAddToGrid" value="usersList">Users List</button>
-    <button v-on:click="handleAddToGrid" value="credits">Credits</button>
-    <button v-on:click="handleAddToGrid" value="scheduledPosts">Scheduled posts</button>
+  <div id="app" class="ease-linear duration-200" :style="headerMainSpacing">
+    <Header @handle-add-to-grid="handleAddToGrid" @handle-hover-header="handleHoverHeader" @unhandle-hover-header="unHandleHoverHeader" />
     <Grid msg="Hello Vue 2 + Vite" :card="component" />
   </div>
 </template>
-  <!-- 
-  <style>
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
-  </style> -->
+

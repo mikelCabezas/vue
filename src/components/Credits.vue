@@ -10,7 +10,8 @@
               {{credits.totalCredits}}
           </p>
           <div class="relative h-2 bg-gray-200 rounded w-full">
-              <div class="absolute top-0 left-0 h-2 bg-green-500 rounded" :class="`w-[${(credits.usedCredits / credits?.totalCredits) * 100}%]`"> 
+              <div class="absolute top-0 left-0 h-2 bg-green-500 rounded"  :style="{ width: `${credits.usedCredits / this.credits.totalCredits * 100}%` }"
+>  
               </div>
           </div>
           <div class="text-center mt-3"><strong>Remaining credits:</strong> 
@@ -34,16 +35,25 @@ export default defineComponent({
       required: false,
     },
   },
+  watch: {
+    credits: function() {
+      // (this.credits.usedCredits / this.credits.totalCredits) * 100
+      // this.usedCreditsPercentage = `w-[${(this.credits.usedCredits / this.credits.totalCredits) * 100}%]`
+      console.log('this.usedCreditsPercentage', this.usedCreditsPercentage)
+    }
+  },
   async created() {
   const response = await fetch("https://run.mocky.io/v3/559909d5-f764-4641-9d79-9509e418107b");
   const data = await response.json();
   this.credits = data;
-  console.log(data)
+  this.usedCreditsPercentage = `w-[${(this.credits.usedCredits / this.credits.totalCredits) * 100}%]`
+
+  console.log(this.usedCreditsPercentage)
 },
 data() {
     return {
         credits: {},
-        usedCreditsPercentage: `w-[${Math.round(this.credits?.usedCredits / this.credits?.totalCredits) * 100}%]`
+        usedCreditsPercentage: ''
     }
 }
 })

@@ -38,6 +38,7 @@ import { GridLayout, GridItem } from "vue-grid-layout"
 import UsersList from './UsersList.vue'
 import Credits from './Credits.vue'
 import ScheduledPosts from './ScheduledPosts.vue'
+import Websites from './Websites.vue'
 
 export default defineComponent({
   name: 'Grid',
@@ -56,7 +57,8 @@ export default defineComponent({
     GridItem,
     UsersList,
     Credits,
-    ScheduledPosts
+    ScheduledPosts,
+    Websites
   },
   methods: {
      resizeEvent: function(i, newH, newW, newHPx, newWPx){
@@ -113,7 +115,8 @@ export default defineComponent({
       cardSizes: [
         {type: 'usersList', layout: {'x': 0, 'y': 0, 'w': 2, 'h': 10,'i': 'Users List'}},
         {type: 'credits', layout: {'x': 0, 'y': 0, 'w': 1, 'h': 10,'i': 'Credits'}},
-        {type: 'scheduledPosts', layout: {'x': 0, 'y': 0, 'w': 3, 'h': 10,'i': 'Scheduled Posts'}}
+        {type: 'scheduledPosts', layout: {'x': 0, 'y': 0, 'w': 3, 'h': 10,'i': 'Scheduled Posts'}},
+        {type: 'websites', layout: {'x': 0, 'y': 0, 'w': 3, 'h': 10,'i': 'Websites'}}
       ],
       layout: [
         // { "x": 0, "y": 0, "w": 3, "h": 7, "i": "Component 1" },
