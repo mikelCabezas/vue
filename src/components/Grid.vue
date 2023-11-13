@@ -8,9 +8,6 @@
         <component class="cursor-default" :user="user" :is="activeCards[index]" />
       </grid-item>
     </grid-layout>
-    <div ref="eventsDiv" class="eventsJSON">
-      <div v-for="event in eventLog"> {{ event }} </div>
-    </div>
   </div>
 </template>
 
