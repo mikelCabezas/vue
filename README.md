@@ -47,10 +47,10 @@ El principal desafío de la prueba es la capacidad de editar la vista utilizando
 **Tiempo Estimado:** 1 semana
 
 **Recursos mockeados:** 
-1. **Users**: https://run.mocky.io/v3/c3db68b1-47e6-45e5-a88a-e4c482c4de06
+1. **Users**: https://run.mocky.io/v3/c2c1f79c-3403-4406-be1b-cf9220d23c28
 2. **Posts**: https://run.mocky.io/v3/04ecea1d-ea0e-46c8-ba39-fabd53897f8d
 2. **Websites**: https://run.mocky.io/v3/c5f76519-3cde-4fe7-9124-a8f1dd91d413
-3. **Credits**: https://run.mocky.io/v3/fab2d54f-18e1-42d9-a141-398562aff14c
+3. **Credits**: https://run.mocky.io/v3/d82d7f1a-57d2-4bcc-a06a-261812ecdee7
 
 ---
 

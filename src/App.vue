@@ -31,9 +31,10 @@ export default defineComponent({
 </script>
 
 <template>
-  <div id="app" class="ease-linear duration-200" :style="headerMainSpacing">
-    <Header @handle-add-to-grid="handleAddToGrid" @handle-hover-header="handleHoverHeader" @unhandle-hover-header="unHandleHoverHeader" />
-    <Grid msg="Hello Vue 2 + Vite" :card="component" />
-  </div>
+  <!-- <div id="app" class="ease-linear duration-200" :style="headerMainSpacing">
+      <Header @handle-add-to-grid="handleAddToGrid" @handle-hover-header="handleHoverHeader" @unhandle-hover-header="unHandleHoverHeader" />
+      <Grid msg="Hello Vue 2 + Vite" :card="component" />
+    </div> -->
+  <router-view />
 </template>
 
